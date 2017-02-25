@@ -23,8 +23,6 @@ class Maze:
 				count += 1;
 
 		for y in range (1, height - 1):
-			print ("row", str(y));
-			
 			rowoffset = y * width;
 			rowaboveoffset = rowoffset - width;
 			rowbelowoffset = rowoffset + width;
