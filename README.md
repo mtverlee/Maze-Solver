@@ -17,3 +17,7 @@ To exit from the virtual environment:
 ```
 deactivate
 ```
+
+## Solution:
+Check your output file and you will see the solution to the maze!
+![Solution](https://github.com/mtverlee/Maze-Solver/img/41_solved.png "Solution")
