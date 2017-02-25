@@ -9,15 +9,12 @@ def solve(maze):
 	if current == None:
 		return path;
 
-	heading = 2; # South
+	heading = 2;
 
-	turn = 1; # Turning left, -1 for right
+	turn = 1;
 
 	startpos = maze.start.Position;
 	endpos = maze.end.Position;
-
-	# N E S W - just a helpful reminder
-	# 0 1 2 3
 
 	count = 1;
 

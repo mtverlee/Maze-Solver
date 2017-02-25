@@ -21,9 +21,6 @@ def solve(maze):
 
 		visited[current.Position[0] * width + current.Position[1]] = True;
 
-		#import code
-		#code.interact(local=locals())
-
 		for n in current.Neighbours:
 			if n != None:
 				npos = n.Position[0] * width + n.Position[1];

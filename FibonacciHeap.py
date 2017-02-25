@@ -1,9 +1,7 @@
 class FibHeap:
     
-    #### Node Class ####
     class Node:
         def __init__(self, key, value):
-            # key value degree mark / prev next child parent
             self.key = key;
             self.value = value;
             self.degree = 0;
@@ -54,7 +52,6 @@ class FibHeap:
             node.parent = None;
             node.mark = False;
             self.degree -= 1;
-    #### End of Node Class ####
 
     def __init__ (self):
         self.minnode = None;
@@ -67,7 +64,6 @@ class FibHeap:
     def insert(self, node):
         self.count += 1;
         self._insertnode(node);
-        # return node
 
     def _insertnode(self, node):
         if self.minnode == None:
@@ -76,7 +72,6 @@ class FibHeap:
             self.minnode.insert(node);
             if node.key < self.minnode.key:
                 self.minnode = node;
-        # return node
 
     def minimum(self):
         if self.minnode == None:
@@ -95,7 +90,6 @@ class FibHeap:
         
         self.count -= 1;
 
-        # 1: Assign all old root children as new roots
         if self.minnode.child != None:
             c = self.minnode.child;
             
@@ -108,14 +102,12 @@ class FibHeap:
             self.minnode.child = None;
             self.minnode.insert(c);
 
-        # 2.1: If we have removed the last key
         if self.minnode.next == self.minnode:
             if self.count != 0:
                 raise AssertionError("Heap error: Expected 0 keys, count is " + str(self.count));
             self.minnode = None;
             return;
 
-        # 2.2: Merge any roots with the same degree
         logsize = 100;
         degreeroots = [None] * logsize;
         self.maxdegree = 0;
@@ -127,7 +119,6 @@ class FibHeap:
             currentpointer = currentpointer.next;
             while degreeroots[currentdegree] != None:
                 other = degreeroots[currentdegree];
-                # Swap if required
                 if current.key > other.key:
                     temp = other;
                     other = current;
@@ -142,7 +133,6 @@ class FibHeap:
             if currentpointer == self.minnode:
                 break;
 
-        # 3: Remove current root and find new minnode
         self.minnode = None;
         newmaxdegree = 0;
         for d in range (0,logsize):
@@ -157,8 +147,6 @@ class FibHeap:
 
     def decreasekey(self, node, newkey):
         if newkey > node.key:
-            #import code
-            #code.interact(local=locals())
             raise AssertionError("Cannot decrease a key to a greater value");
         elif newkey == node.key:
             return;
