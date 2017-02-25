@@ -17,7 +17,7 @@ import argparse
 sf = SolverFactory();
 parser = argparse.ArgumentParser()
 parser.add_argument("-m", "--method", nargs='?', const=sf.Default, default=sf.Default,
-						choices=sf.Choices)
+						choices="hellp")
 parser.add_argument("input_file")
 parser.add_argument("output_file")
 args = parser.parse_args()
