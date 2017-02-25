@@ -9,13 +9,13 @@ class SolverFactory:
 			return ["Left Turn Only", leftturn.solve];
 		elif type == "depthfirst":
 			import depthfirst;
-			return ["Depthfirst search", depthfirst.solve];
+			return ["Depthfirst Search", depthfirst.solve];
 		elif type == "dijkstra":
 			import dijkstra;
 			return ["Dijkstra's Algorithm", dijkstra.solve];
 		elif type == "astar":
 			import astar;
-			return ["A-star Search", astar.solve];
+			return ["A-Star Search", astar.solve];
 		else:
 			import breadthfirst;
-			return ["Breadthfirst search", breadthfirst.solve];
+			return ["Breadthfirst Search", breadthfirst.solve];

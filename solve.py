@@ -44,12 +44,12 @@ t1 = time.time()
 
 total = t1-t0
 
-print ("Nodes explored: ", stats[0]);
+print ("Nodes Explored: ", stats[0]);
 if (stats[2]):
-	print ("Path found - length was:", stats[1]);
+	print ("Path Found - Length:", stats[1]);
 else:
 	print ("No Path Found!");
-print ("Time elapsed: ", total, "\n");
+print ("Time Elapsed: ", total, "\n");
 
 print ("Saving Image: " + args.output_file);
 mazeimage = np.array(im)
