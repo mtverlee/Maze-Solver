@@ -10,7 +10,7 @@ Then, in the Maze-Solver directory:
 ```
 ./install.sh
 source run/bin/activate
-python solve.py <-m> <input_file> <output_file>
+python solve.py [-m] <input_file> <output_file>
 ```
 
 To exit from the virtual environment:
