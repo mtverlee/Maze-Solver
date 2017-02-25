@@ -46,7 +46,7 @@ total = t1-t0
 
 print ("Nodes explored: ", stats[0]);
 if (stats[2]):
-	print ("Path found, length", stats[1]);
+	print ("Path found - length was:", stats[1]);
 else:
 	print ("No Path Found!");
 print ("Time elapsed: ", total, "\n");
