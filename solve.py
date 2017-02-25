@@ -1,10 +1,19 @@
+"""
+
+Maze-Solver
+By: Matt VerLee
+mtverlee@mavs.coloradomesa.edu
+https://github.com/mtverlee
+
+"""
+
 import numpy as np;
 from PIL import Image;
 import time
 from mazes import Maze;
 from factory import SolverFactory;
-
 import argparse
+
 sf = SolverFactory();
 parser = argparse.ArgumentParser()
 parser.add_argument("-m", "--method", nargs='?', const=sf.Default, default=sf.Default,
