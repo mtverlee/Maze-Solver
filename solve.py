@@ -51,7 +51,7 @@ else:
 	print ("No Path Found!");
 print ("Time elapsed: ", total, "\n");
 
-print ("Saving Image...");
+print ("Saving Image: " + args.output_file);
 mazeimage = np.array(im)
 imout = np.array(mazeimage);
 imout[imout==1] = 255;
