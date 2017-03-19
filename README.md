@@ -1,4 +1,4 @@
-# Maze-Solver
+# mazeSolve
 Python script that solves mazes in image form. Note: This script can be RAM intensive, so don't try to solve too big of mazes unless you have a ton of RAM. :)
 
 ## Installation:
